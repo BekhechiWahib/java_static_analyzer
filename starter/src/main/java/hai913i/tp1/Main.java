@@ -4,10 +4,13 @@ import java.nio.file.Path;
 import java.util.List;
 
 import org.eclipse.jdt.core.compiler.IProblem;
+import org.eclipse.jdt.core.dom.CompilationUnit;
 
 import hai913i.tp1.parse.JdtParser;
 import hai913i.tp1.parse.JdtParser.ParsedFile;
 import hai913i.tp1.parse.ProjectSources;
+import hai913i.tp1.visitor.MyASTVisitor;
+import hai913i.tp1.visitor.TypeCellector;
 
 /**
  * Point d'entrée en ligne de commande de l'analyseur (version de départ).
@@ -56,5 +59,15 @@ public final class Main {
         // À FAIRE (A1 et suite) : parcourir les AST avec vos visiteurs, construire votre modèle de faits,
         // puis calculer les métriques et le graphe d'appel. Gardez cette classe courte : elle lit les
         // arguments et délègue.
+
+        // java -jar ... DOSSIER --ast Dvd.java
+        if (args.length >= 3 && args[1].equals("--ast")) {
+            for (ParsedFile file : files) {
+                if (file.path().getFileName().toString().equals(args[2])) {
+                    System.out.println("=== " + file.path().getFileName() + " ===");
+                    file.unit().accept(new TypeCellector());
+                }
+            }
+        }
     }
 }
