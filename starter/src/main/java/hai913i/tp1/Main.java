@@ -11,6 +11,7 @@ import hai913i.tp1.parse.JdtParser.ParsedFile;
 import hai913i.tp1.parse.ProjectSources;
 import hai913i.tp1.visitor.MyASTVisitor;
 import hai913i.tp1.visitor.TypeCellector;
+import hai913i.tp1.visitor.TypeCounter;
 
 /**
  * Point d'entrée en ligne de commande de l'analyseur (version de départ).
@@ -60,14 +61,36 @@ public final class Main {
         // puis calculer les métriques et le graphe d'appel. Gardez cette classe courte : elle lit les
         // arguments et délègue.
 
-        // java -jar ... DOSSIER --ast Dvd.java
+
+        TypeCounter counter = new TypeCounter();
+        for (ParsedFile file : files) {
+            file.unit().accept(counter);
+        }
+        System.out.println("classes      : " + counter.classes);
+        System.out.println("interfaces   : " + counter.interfaces);
+        System.out.println("enums        : " + counter.enums);
+        System.out.println("methodes     : " + counter.methods + " (dont " + counter.constructors + " constructeurs)");
+        System.out.println("attributs    : " + counter.fields);
+    
         if (args.length >= 3 && args[1].equals("--ast")) {
             for (ParsedFile file : files) {
                 if (file.path().getFileName().toString().equals(args[2])) {
-                    System.out.println("=== " + file.path().getFileName() + " ===");
+                    System.out.println("====================================== Détails de " + file.path().getFileName() + " =======================================");
+                    file.unit().accept(new TypeCellector());
+                }else if(args[2].equals("all")) {
+                    System.out.println("====================================== Détails de " + file.path().getFileName() + " =======================================");
                     file.unit().accept(new TypeCellector());
                 }
             }
         }
+
+       /*  if (args.length >= 3 && args[1].equals("--ast")) {
+            for (ParsedFile file : files) {
+                if (file.path().getFileName().toString().equals(args[2])) {
+                    System.out.println("=== " + file.path().getFileName() + " ===");
+                    file.unit().accept(new MyASTVisitor());
+                }
+            }
+        }*/
     }
 }

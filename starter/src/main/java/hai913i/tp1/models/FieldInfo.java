@@ -8,4 +8,14 @@ public class FieldInfo {
         this.type = type;
         this.visibility = visibility;
     }
+
+    public String getName() {
+        return name;
+    }
+    public String getType() {
+        return type;
+    }
+    public String getVisibility() {
+        return visibility;
+    }
 }

@@ -10,4 +10,15 @@ public class MethodInfo {
         this.paramCount = paramCount;
         this.constructor = constructor;
     }
+
+    public String getName() {
+        return name;
+    }  
+    public int getParamCount() {
+        return paramCount;
+    }
+    public boolean getConstructor() {
+        return constructor;
+    }
+
 }
