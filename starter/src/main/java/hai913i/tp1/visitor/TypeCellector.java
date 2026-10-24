@@ -1,6 +1,4 @@
 package hai913i.tp1.visitor;
-
-import org.eclipse.jdt.core.dom.Modifier;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,18 +12,20 @@ import org.eclipse.jdt.core.dom.ITypeBinding;
 import hai913i.tp1.models.FieldInfo;
 import hai913i.tp1.models.MethodInfo;
 import hai913i.tp1.models.TypeInfo;
+import hai913i.tp1.utils.MyVisibility;
 
 import org.eclipse.jdt.core.dom.MethodDeclaration;
 
 public class TypeCellector extends ASTVisitor {
 
-    
-    
+    // Classe des debuts pour essayer de collecter les informations sur les types, les champs et les méthodes
+    // via les visiteurs AST.
+
     //information of the type 
     TypeInfo typeInfo = new TypeInfo();
     // information of the field and method
     FieldInfo fieldInfo = new FieldInfo("", "", "");
-    MethodInfo methodInfo = new MethodInfo("", 0, false);
+    MethodInfo methodInfo = new MethodInfo("", 0, false, 0);
     List<MethodInvocation> appels = new ArrayList<>();
 
     @Override
@@ -67,13 +67,13 @@ public class TypeCellector extends ASTVisitor {
     public boolean visit(FieldDeclaration node) {
        
 
-        fieldInfo = new FieldInfo(node.fragments().get(0).toString(), node.getType().toString(), visibility(node.getModifiers()));
+        fieldInfo = new FieldInfo(node.fragments().get(0).toString(), node.getType().toString(), MyVisibility.visibility(node.getModifiers()));
         System.out.println("field: " + fieldInfo.getName() + ", type: " + fieldInfo.getType() + ", visibility: " + fieldInfo.getVisibility());
         return true;
     }
     @Override 
     public boolean visit(MethodDeclaration node) {
-        methodInfo = new MethodInfo(node.getName().getIdentifier(), node.parameters().size(), node.isConstructor());
+        methodInfo = new MethodInfo(node.getName().getIdentifier(), node.parameters().size(), node.isConstructor(), 0);
         System.out.println("method: " + methodInfo.getName() + ", paramCount: " + methodInfo.getParamCount() + ", constructor: " + methodInfo.getConstructor());
         return true;
     }
@@ -86,11 +86,6 @@ public class TypeCellector extends ASTVisitor {
    
 
    
-    static String visibility(int mods) {
-    if (Modifier.isPublic(mods))    return "public";
-    if (Modifier.isProtected(mods)) return "protected";
-    if (Modifier.isPrivate(mods))   return "private";
-    return "package";
-}
+   
     
 }
