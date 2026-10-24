@@ -21,6 +21,7 @@ import hai913i.tp1.parse.JdtParser.ParsedFile;
 import hai913i.tp1.parse.ProjectSources;
 import hai913i.tp1.visitor.MyMethodInvocation;
 import hai913i.tp1.visitor.ModelCollector;
+import hai913i.tp1.visitor.MyASTVisitor;
 import hai913i.tp1.visitor.TypeCellector;
 
 /**
@@ -72,7 +73,15 @@ public final class Main {
         // arguments et délègue.
 
     
-
+        // A0 pour un test rapide : java -jar target/hai913i-tp1-analyzer.jar DOSSIER --astvisitor Dvd.java
+        if (args.length >= 3 && args[1].equals("--astvisitor")) {
+            for (ParsedFile file : files) {
+                if (file.path().getFileName().toString().equals(args[2])) {
+                    System.out.println("=== " + file.path().getFileName() + " ===");
+                    file.unit().accept(new MyASTVisitor());
+                }
+            }
+        }
 
 
 // Mode détails des visiteurs de l'étape A :  DOSSIER --ast Fichier.java   ou   DOSSIER --ast all

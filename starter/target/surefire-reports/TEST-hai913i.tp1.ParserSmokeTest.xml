@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="hai913i.tp1.ParserSmokeTest" time="0.899" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" version="3.0.2" name="hai913i.tp1.ParserSmokeTest" time="0.958" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="19"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="FR"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-19\bin"/>
-    <property name="sun.java.command" value="C:\Users\DELL\AppData\Local\Temp\surefire15106404386736657801\surefirebooter-20261024191754668_3.jar C:\Users\DELL\AppData\Local\Temp\surefire15106404386736657801 2026-10-24T19-17-54_464-jvmRun1 surefire-20261024191754668_1tmp surefire_0-20261024191754668_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\DELL\AppData\Local\Temp\surefire296560053932960163\surefirebooter-20261024220703616_3.jar C:\Users\DELL\AppData\Local\Temp\surefire296560053932960163 2026-10-24T22-07-03_320-jvmRun1 surefire-20261024220703616_1tmp surefire_0-20261024220703616_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\DELL\Desktop\Master_2_Montpellier\evolution_restructuration\java_static_analyzer\starter\target\test-classes;C:\Users\DELL\Desktop\Master_2_Montpellier\evolution_restructuration\java_static_analyzer\starter\target\classes;C:\Users\DELL\.m2\repository\org\eclipse\jdt\org.eclipse.jdt.core\3.46.0\org.eclipse.jdt.core-3.46.0.jar;C:\Users\DELL\.m2\repository\org\eclipse\platform\org.eclipse.core.resources\3.24.0\org.eclipse.core.resources-3.24.0.jar;C:\Users\DELL\.m2\repository\org\eclipse\platform\org.eclipse.core.expressions\3.9.600\org.eclipse.core.expressions-3.9.600.jar;C:\Users\DELL\.m2\repository\net\java\dev\jna\jna\5.18.1\jna-5.18.1.jar;C:\Users\DELL\.m2\repository\org\eclipse\platform\org.eclipse.osgi\3.24.200\org.eclipse.osgi-3.24.200.jar;C:\Users\DELL\.m2\repository\org\eclipse\platform\org.eclipse.core.runtime\3.34.200\org.eclipse.core.runtime-3.34.200.jar;C:\Users\DELL\.m2\repository\org\eclipse\platform\org.eclipse.equinox.common\3.20.300\org.eclipse.equinox.common-3.20.300.jar;C:\Users\DELL\.m2\repository\org\eclipse\platform\org.eclipse.core.jobs\3.15.700\org.eclipse.core.jobs-3.15.700.jar;C:\Users\DELL\.m2\repository\org\eclipse\platform\org.eclipse.equinox.registry\3.12.600\org.eclipse.equinox.registry-3.12.600.jar;C:\Users\DELL\.m2\repository\org\eclipse\platform\org.eclipse.equinox.preferences\3.12.100\org.eclipse.equinox.preferences-3.12.100.jar;C:\Users\DELL\.m2\repository\org\osgi\org.osgi.service.prefs\1.1.2\org.osgi.service.prefs-1.1.2.jar;C:\Users\DELL\.m2\repository\org\osgi\osgi.annotation\8.0.1\osgi.annotation-8.0.1.jar;C:\Users\DELL\.m2\repository\org\eclipse\platform\org.eclipse.core.contenttype\3.9.800\org.eclipse.core.contenttype-3.9.800.jar;C:\Users\DELL\.m2\repository\org\eclipse\platform\org.eclipse.equinox.app\1.7.600\org.eclipse.equinox.app-1.7.600.jar;C:\Users\DELL\.m2\repository\org\eclipse\platform\org.eclipse.core.filesystem\1.11.400\org.eclipse.core.filesystem-1.11.400.jar;C:\Users\DELL\.m2\repository\net\java\dev\jna\jna-platform\5.18.1\jna-platform-5.18.1.jar;C:\Users\DELL\.m2\repository\org\eclipse\platform\org.eclipse.text\3.14.700\org.eclipse.text-3.14.700.jar;C:\Users\DELL\.m2\repository\org\eclipse\platform\org.eclipse.core.commands\3.12.500\org.eclipse.core.commands-3.12.500.jar;C:\Users\DELL\.m2\repository\org\eclipse\jdt\ecj\3.46.0\ecj-3.46.0.jar;C:\Users\DELL\.m2\repository\org\junit\jupiter\junit-jupiter\5.14.4\junit-jupiter-5.14.4.jar;C:\Users\DELL\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.14.4\junit-jupiter-api-5.14.4.jar;C:\Users\DELL\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\DELL\.m2\repository\org\junit\platform\junit-platform-commons\1.14.4\junit-platform-commons-1.14.4.jar;C:\Users\DELL\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\DELL\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.14.4\junit-jupiter-params-5.14.4.jar;C:\Users\DELL\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.14.4\junit-jupiter-engine-5.14.4.jar;C:\Users\DELL\.m2\repository\org\junit\platform\junit-platform-engine\1.14.4\junit-platform-engine-1.14.4.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\DELL\AppData\Local\Temp\surefire15106404386736657801\surefirebooter-20261024191754668_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\DELL\AppData\Local\Temp\surefire296560053932960163\surefirebooter-20261024220703616_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="19.0.1+10-21"/>
@@ -58,5 +58,5 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="63.0"/>
   </properties>
-  <testcase name="parsesTheSampleAndResolvesBindingsAcrossFiles" classname="hai913i.tp1.ParserSmokeTest" time="0.877"/>
+  <testcase name="parsesTheSampleAndResolvesBindingsAcrossFiles" classname="hai913i.tp1.ParserSmokeTest" time="0.92"/>
 </testsuite>

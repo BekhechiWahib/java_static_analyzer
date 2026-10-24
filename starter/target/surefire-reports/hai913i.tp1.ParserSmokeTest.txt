@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: hai913i.tp1.ParserSmokeTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.899 s -- in hai913i.tp1.ParserSmokeTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.958 s -- in hai913i.tp1.ParserSmokeTest
